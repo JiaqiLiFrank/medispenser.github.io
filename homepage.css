@@ -1,54 +1,162 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    background-color: white; /* Start with white background */
-    animation: fadeIn 0.8s ease-in-out forwards; /* Fade-in animation */
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0; /* Completely invisible at the start */
-    }
-    100% {
-        opacity: 1; /* Fully visible at the end of the animation */
-    }
+body {
+    line-height: 1.6;
 }
 
-::selection {
-    background-color: #56018D; /* Set your desired background color */
-    color: white; /* Set your desired text color */
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 3%;
+    padding-bottom: 20px;
+    z-index: 10;
+    transition: opacity 0.5s ease;
 }
 
-.title{
+.navbar.hidden {
+    opacity: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: left;
+    margin-right: 50px;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 50px;
+}
+
+.navbar ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
     font-weight: bold;
-    text-align: left;
-    padding-left: 5%;
-    padding-top: 5%;
-    font-size: 60px;
+    text-decoration: none;
+    font-size: 2em;
 }
 
-.sub_title_1{
+/* Video Background */
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    padding-left: 5%;
+    text-align: left;
+    padding-top: 80px;
+    overflow: hidden;  /* Ensures no overflow when using the video */
+}
+
+/* Video Element */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the video covers the whole area */
+    z-index: -1;  /* Pushes the video behind the content */
+}
+
+/* Dark Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Darker overlay */
+    z-index: 0;  /* Ensures the overlay is above the video */
+}
+
+/* Header Content */
+.header-content {
+    position: relative;
+    z-index: 1;  /* Content stays above both video and overlay */
+}
+
+.title {
+    font-size: 10em;
     font-weight: bold;
-    text-align: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    font-size: 45px;
+    margin-bottom: -0.6em;
 }
 
-.sub_title_2{
+.name {
+    font-size: 6em;
     font-weight: bold;
-    text-align: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    font-size: 35px;
+    margin-bottom: -0.4em;
 }
 
-.normal_text{
-    font-weight: normal;
-    text-align: left;
-    padding-left: 5%;
-    padding-top: 2%;
-    font-size: 25px;
+.slogan {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 5em;
+    margin-top: 1em;
 }
 
+.subtitle {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+.introduction {
+    height: 100vh;
+    padding: 2em;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.info-title{
+    text-align: center;
+    font-size: 2.5em;
+    /* font-weight: bold; */
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.info-title-bold{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.info-normal{
+    font-size: 1em;
+}
+
+.info-block {
+    text-align: center;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 1em;
+}
